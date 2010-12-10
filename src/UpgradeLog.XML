@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="DataFramework">
+</Property><Property Name="Solution File" Value="C:\Users\kid\Documents\Visual Studio 2010\Projects\DataFramework\DataFramework.sln">
+</Property><Property Name="Date" Value="vendredi 10 décembre 2010">
+</Property><Property Name="Time" Value="11:55">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="DataFramework.sln" Description="File successfully backed up as C:\Users\kid\Documents\Visual Studio 2010\Projects\DataFramework\Backup\DataFramework.sln">
+</Event><Event ErrorLevel="0" Project="DDD.Domain" Source="DDD.Domain\DDD.Domain.csproj" Description="Project file successfully backed up as C:\Users\kid\Documents\Visual Studio 2010\Projects\DataFramework\Backup\DDD.Domain\DDD.Domain.csproj">
+</Event><Event ErrorLevel="0" Project="DDD.Domain" Source="DDD.Domain\ISession.cs" Description="File successfully backed up as C:\Users\kid\Documents\Visual Studio 2010\Projects\DataFramework\Backup\DDD.Domain\ISession.cs">
+</Event><Event ErrorLevel="0" Project="DDD.Domain" Source="DDD.Domain\MetaData\ColumnAttribute.cs" Description="File successfully backed up as C:\Users\kid\Documents\Visual Studio 2010\Projects\DataFramework\Backup\DDD.Domain\MetaData\ColumnAttribute.cs">
+</Event><Event ErrorLevel="0" Project="DDD.Domain" Source="DDD.Domain\MetaData\ColumnInfo.cs" Description="File successfully backed up as C:\Users\kid\Documents\Visual Studio 2010\Projects\DataFramework\Backup\DDD.Domain\MetaData\ColumnInfo.cs">
+</Event><Event ErrorLevel="0" Project="DDD.Domain" Source="DDD.Domain\MetaData\MetaData.cs" Description="File successfully backed up as C:\Users\kid\Documents\Visual Studio 2010\Projects\DataFramework\Backup\DDD.Domain\MetaData\MetaData.cs">
+</Event><Event ErrorLevel="0" Project="DDD.Domain" Source="DDD.Domain\MetaData\MetaDataStore.cs" Description="File successfully backed up as C:\Users\kid\Documents\Visual Studio 2010\Projects\DataFramework\Backup\DDD.Domain\MetaData\MetaDataStore.cs">
+</Event><Event ErrorLevel="0" Project="DDD.Domain" Source="DDD.Domain\MetaData\PrimaryKeyAttribute.cs" Description="File successfully backed up as C:\Users\kid\Documents\Visual Studio 2010\Projects\DataFramework\Backup\DDD.Domain\MetaData\PrimaryKeyAttribute.cs">
+</Event><Event ErrorLevel="0" Project="DDD.Domain" Source="DDD.Domain\MetaData\ReferenceAttribute.cs" Description="File successfully backed up as C:\Users\kid\Documents\Visual Studio 2010\Projects\DataFramework\Backup\DDD.Domain\MetaData\ReferenceAttribute.cs">
+</Event><Event ErrorLevel="0" Project="DDD.Domain" Source="DDD.Domain\MetaData\ReferenceInfo.cs" Description="File successfully backed up as C:\Users\kid\Documents\Visual Studio 2010\Projects\DataFramework\Backup\DDD.Domain\MetaData\ReferenceInfo.cs">
+</Event><Event ErrorLevel="0" Project="DDD.Domain" Source="DDD.Domain\MetaData\TableAttribute.cs" Description="File successfully backed up as C:\Users\kid\Documents\Visual Studio 2010\Projects\DataFramework\Backup\DDD.Domain\MetaData\TableAttribute.cs">
+</Event><Event ErrorLevel="0" Project="DDD.Domain" Source="DDD.Domain\MetaData\TableInfo.cs" Description="File successfully backed up as C:\Users\kid\Documents\Visual Studio 2010\Projects\DataFramework\Backup\DDD.Domain\MetaData\TableInfo.cs">
+</Event><Event ErrorLevel="0" Project="DDD.Domain" Source="DDD.Domain\Properties\AssemblyInfo.cs" Description="File successfully backed up as C:\Users\kid\Documents\Visual Studio 2010\Projects\DataFramework\Backup\DDD.Domain\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="DDD.Domain" Source="DDD.Domain\Storage\DatabaseAction.cs" Description="File successfully backed up as C:\Users\kid\Documents\Visual Studio 2010\Projects\DataFramework\Backup\DDD.Domain\Storage\DatabaseAction.cs">
+</Event><Event ErrorLevel="0" Project="DDD.Domain" Source="DDD.Domain\Storage\DeleteAction.cs" Description="File successfully backed up as C:\Users\kid\Documents\Visual Studio 2010\Projects\DataFramework\Backup\DDD.Domain\Storage\DeleteAction.cs">
+</Event><Event ErrorLevel="0" Project="DDD.Domain" Source="DDD.Domain\Storage\EntityHydrater.cs" Description="File successfully backed up as C:\Users\kid\Documents\Visual Studio 2010\Projects\DataFramework\Backup\DDD.Domain\Storage\EntityHydrater.cs">
+</Event><Event ErrorLevel="0" Project="DDD.Domain" Source="DDD.Domain\Storage\ExtensionMethods.cs" Description="File successfully backed up as C:\Users\kid\Documents\Visual Studio 2010\Projects\DataFramework\Backup\DDD.Domain\Storage\ExtensionMethods.cs">
+</Event><Event ErrorLevel="0" Project="DDD.Domain" Source="DDD.Domain\Storage\GetByIdAction.cs" Description="File successfully backed up as C:\Users\kid\Documents\Visual Studio 2010\Projects\DataFramework\Backup\DDD.Domain\Storage\GetByIdAction.cs">
+</Event><Event ErrorLevel="0" Project="DDD.Domain" Source="DDD.Domain\Storage\InitializeProxyAction.cs" Description="File successfully backed up as C:\Users\kid\Documents\Visual Studio 2010\Projects\DataFramework\Backup\DDD.Domain\Storage\InitializeProxyAction.cs">
+</Event><Event ErrorLevel="0" Project="DDD.Domain" Source="DDD.Domain\Storage\InsertAction.cs" Description="File successfully backed up as C:\Users\kid\Documents\Visual Studio 2010\Projects\DataFramework\Backup\DDD.Domain\Storage\InsertAction.cs">
+</Event><Event ErrorLevel="2" Project="DDD.Domain" Source="DDD.Domain\Storage\Session.cs" Description="Failed to backup file as C:\Users\kid\Documents\Visual Studio 2010\Projects\DataFramework\Backup\DDD.Domain\Storage\Session.cs">
+</Event><Event ErrorLevel="0" Project="DDD.Domain" Source="DDD.Domain\Storage\SessionLevelCache.cs" Description="File successfully backed up as C:\Users\kid\Documents\Visual Studio 2010\Projects\DataFramework\Backup\DDD.Domain\Storage\SessionLevelCache.cs">
+</Event><Event ErrorLevel="0" Project="DDD.Domain" Source="DDD.Domain\Storage\TypeConverter.cs" Description="File successfully backed up as C:\Users\kid\Documents\Visual Studio 2010\Projects\DataFramework\Backup\DDD.Domain\Storage\TypeConverter.cs">
+</Event><Event ErrorLevel="0" Project="DDD.Domain" Source="DDD.Domain\Storage\UpdateAction.cs" Description="File successfully backed up as C:\Users\kid\Documents\Visual Studio 2010\Projects\DataFramework\Backup\DDD.Domain\Storage\UpdateAction.cs">
+</Event><Event ErrorLevel="0" Project="DDD.Domain" Source="DDD.Domain\DDD.Domain.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="DDD.Domain" Source="DDD.Domain\DDD.Domain.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="DataFramework.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="DataFramework.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="DDD.Domain" Source="DDD.Domain\DDD.Domain.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>
