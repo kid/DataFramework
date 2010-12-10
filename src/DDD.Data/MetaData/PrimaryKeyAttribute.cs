@@ -10,6 +10,14 @@ namespace DDD.Data.MetaData
         /// <summary>
         /// Initializes a new instance of the <see cref="PrimaryKeyAttribute"/> class.
         /// </summary>
+        public PrimaryKeyAttribute()
+        {
+            this.columnName = null;
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PrimaryKeyAttribute"/> class.
+        /// </summary>
         /// <param name="columnName">Name of the column.</param>
         public PrimaryKeyAttribute(string columnName)
         {

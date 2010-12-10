@@ -7,7 +7,9 @@ namespace DDD.Data.Tests.Models
     {
         [PrimaryKey("Id")]
         public int? Id { get; set; }
+        [Column("Name")]
         public string Name { get; set; }
+        [Column("Description")]
         public string Description { get; set; }
     }
 }
