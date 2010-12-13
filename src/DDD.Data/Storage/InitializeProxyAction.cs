@@ -26,7 +26,18 @@ namespace DDD.Data.Storage
 
         public void InitializeProxy(object proxy, Type targetType)
         {
-            throw new System.NotImplementedException();
+            using (var command = CreateCommand())
+            {
+                var tableInfo = MetaDataStore.GetTableInfoFor(targetType);
+                //var query = tableInfo.GetSelectStatementForAllFields();
+                //tableInfo.AddWhereByIdClause(query);
+
+                //object id = tableInfo.PrimaryKey.PropertyInfo.GetValue(proxy, null);
+                //command.CommandText = query.ToString();
+                //command.CreateAndAddInputParameter(tableInfo.PrimaryKey.DbType, tableInfo.GetPrimaryKeyParameterName(), id);
+
+                Hydrater.UpdateEntity(targetType, proxy, command);
+            }
         }
     }
 }

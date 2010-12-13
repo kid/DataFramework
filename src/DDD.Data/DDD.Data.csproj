@@ -53,6 +53,10 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Castle.Core, Version=2.5.1.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libs\Castle.Core\Castle.Core.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -84,8 +88,10 @@
     <Compile Include="Storage\EntityHydrater.cs" />
     <Compile Include="Storage\ExtensionMethods.cs" />
     <Compile Include="Storage\GetByIdAction.cs" />
+    <Compile Include="Storage\IDataProvider.cs" />
     <Compile Include="Storage\InitializeProxyAction.cs" />
     <Compile Include="Storage\InsertAction.cs" />
+    <Compile Include="Storage\LazyLoadingInterceptor.cs" />
     <Compile Include="Storage\SessionLevelCache.cs" />
     <Compile Include="Storage\TypeConverter.cs" />
     <Compile Include="Storage\UpdateAction.cs" />

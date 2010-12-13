@@ -7,16 +7,16 @@ namespace DDD.Data
 {
     public class Session : ISession
     {
-        private readonly string connectionString;
         private IDbConnection connection;
         private IDbTransaction transaction;
+        private readonly IDataProvider dataProvider;
         private readonly MetaDataStore metaDataStore;
         private readonly EntityHydrater hydrater;
         private readonly SessionLevelCache sessionLevelCache;
 
-        public Session(string connectionString, MetaDataStore metaDataStore)
+        public Session(IDataProvider dataProvider, MetaDataStore metaDataStore)
         {
-            this.connectionString = connectionString;
+            this.dataProvider = dataProvider;
             this.metaDataStore = metaDataStore;
             sessionLevelCache = new SessionLevelCache();
             hydrater = new EntityHydrater(this, metaDataStore, sessionLevelCache);
@@ -24,11 +24,9 @@ namespace DDD.Data
 
         private void InitializeConnection()
         {
-            //this.connection = TODO
+            this.connection = this.dataProvider.CreateConnection();
             this.connection.Open();
             this.transaction = this.connection.BeginTransaction();
-
-            throw new NotImplementedException();
         }
 
         public IDbConnection GetConnection()
