@@ -30,11 +30,20 @@ namespace DDD.Data.MetaData.Tests
         }
 
         [TestMethod]
-        public void It_should_have_a_PrimaryKey_for_all_models()
+        public void It_should_have_a_PrimaryKey_for_each_TableInfo()
         {
             Assert.IsNotNull(store.GetTableInfoFor<Customer>().PrimaryKey);
             Assert.IsNotNull(store.GetTableInfoFor<Order>().PrimaryKey);
             Assert.IsNotNull(store.GetTableInfoFor<Product>().PrimaryKey);
+        }
+
+        [TestMethod]
+        public void Then_non_named_column_should_have_been_given_the_name_of_the_property()
+        {
+            var tableInfo = store.GetTableInfoFor<Customer>();
+            Assert.AreEqual("Id", tableInfo.PrimaryKey.Name);
+            Assert.IsNotNull(tableInfo.Columns.FirstOrDefault(_ => _.Name == "LastName"));
+            Assert.IsNotNull(tableInfo.References.FirstOrDefault(_ => _.Name == "AddressId"));
         }
 
         [TestMethod]
@@ -43,6 +52,7 @@ namespace DDD.Data.MetaData.Tests
             Assert.IsTrue(store.GetTableInfoFor<Order>().References.Count() > 0);
             var referenceInfo = store.GetTableInfoFor<Order>().References.FirstOrDefault(_ => _.ReferenceType == typeof(Customer));
             Assert.IsNotNull(referenceInfo);
+            Assert.AreEqual("CustomerId", referenceInfo.Name);
             Assert.AreEqual(DbType.Int32, referenceInfo.DbType);
         }
     }

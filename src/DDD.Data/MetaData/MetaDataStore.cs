@@ -84,7 +84,12 @@ namespace DDD.Data.MetaData
             PropertyInfo propertyInfo,
             PrimaryKeyAttribute primaryKeyAttribute)
         {
-            tableInfo.PrimaryKey = new ColumnInfo(this, primaryKeyAttribute.ColumnName, propertyInfo.PropertyType, propertyInfo);
+            tableInfo.PrimaryKey = new ColumnInfo(
+                this,
+                primaryKeyAttribute.ColumnName ?? propertyInfo.Name,
+                propertyInfo.PropertyType,
+                propertyInfo
+            );
         }
 
         private void AddColumnInfo(
@@ -93,7 +98,12 @@ namespace DDD.Data.MetaData
             ColumnAttribute columnAttribute)
         {
             tableInfo.AddColumn(
-                new ColumnInfo(this, columnAttribute.ColumnName, propertyInfo.PropertyType, propertyInfo)
+                new ColumnInfo(
+                    this,
+                    columnAttribute.ColumnName ?? propertyInfo.Name,
+                    propertyInfo.PropertyType,
+                    propertyInfo
+                )
             );
         }
 
@@ -102,8 +112,21 @@ namespace DDD.Data.MetaData
             PropertyInfo propertyInfo,
             ReferenceAttribute referenceAttribute)
         {
+            var columnName = referenceAttribute.ColumnName;
+            if (columnName == null)
+            {
+                columnName = string.Concat(
+                    propertyInfo.Name,
+                    this.GetTableInfoFor(propertyInfo.PropertyType).PrimaryKey.Name
+                );
+            }
             tableInfo.AddReference(
-                new ReferenceInfo(this, referenceAttribute.ColumnName, propertyInfo.PropertyType, propertyInfo)
+                new ReferenceInfo(
+                    this,
+                    columnName,
+                    propertyInfo.PropertyType,
+                    propertyInfo
+                )
             );
         }
 

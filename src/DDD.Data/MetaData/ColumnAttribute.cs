@@ -10,6 +10,14 @@ namespace DDD.Data.MetaData
         /// <summary>
         /// Initializes a new instance of the <see cref="ColumnAttribute"/> class.
         /// </summary>
+        public ColumnAttribute()
+        {
+            this.columnName = null;
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ColumnAttribute"/> class.
+        /// </summary>
         /// <param name="columnName">Name of the column.</param>
         public ColumnAttribute(string columnName)
         {
