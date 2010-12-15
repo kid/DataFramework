@@ -15,7 +15,10 @@ namespace DDD.Data.SqlServer.Tests
         public void CanCreateAConnection()
         {
             var provider = new SqlServerDataProvider(connectionString);
-            using (provider.CreateConnection()) ;
+            using (var connection = provider.CreateConnection())
+            {
+                connection.Open();
+            }
         }
     }
 }
