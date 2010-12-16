@@ -3,7 +3,7 @@ using DDD.Data.MetaData;
 
 namespace DDD.Data.Storage
 {
-    public class InsertAction : DatabaseAction
+    public class InsertAction<TEntity> : DatabaseAction
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="InsertAction"/> class.
@@ -23,7 +23,7 @@ namespace DDD.Data.Storage
         {
         }
 
-        public TEntity Insert<TEntity>(TEntity entity)
+        public TEntity Insert(TEntity entity)
         {
             throw new System.NotImplementedException();
         }

@@ -79,22 +79,22 @@ namespace DDD.Data
 
         public TEntity Get<TEntity>(object id)
         {
-            return CreateAction<GetByIdAction>().Get<TEntity>(id);
+            return CreateAction<GetByIdAction<TEntity>>().Get(id);
         }
 
         public TEntity Insert<TEntity>(TEntity entity)
         {
-            return CreateAction<InsertAction>().Insert(entity);
+            return CreateAction<InsertAction<TEntity>>().Insert(entity);
         }
 
         public TEntity Update<TEntity>(TEntity entity)
         {
-            return CreateAction<UpdateAction>().Update(entity);
+            return CreateAction<UpdateAction<TEntity>>().Update(entity);
         }
 
         public void Delete<TEntity>(TEntity entity)
         {
-            CreateAction<DeleteAction>().Delete(entity);
+            CreateAction<DeleteAction<TEntity>>().Delete(entity);
         }
 
         public void InitializeProxy(object proxy, Type targetType)

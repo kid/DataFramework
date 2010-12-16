@@ -3,7 +3,7 @@ using DDD.Data.MetaData;
 
 namespace DDD.Data.Storage
 {
-    public class UpdateAction : DatabaseAction
+    public class UpdateAction<TEntity> : DatabaseAction
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateAction"/> class.
@@ -23,7 +23,7 @@ namespace DDD.Data.Storage
         {
         }
 
-        public TEntity Update<TEntity>(TEntity entity)
+        public TEntity Update(TEntity entity)
         {
             throw new System.NotImplementedException();
         }

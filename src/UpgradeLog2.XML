@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="DataFramework">
+</Property><Property Name="Solution File" Value="C:\Users\kid\Documents\Visual Studio 2010\Projects\DataFramework\src\DataFramework.sln">
+</Property><Property Name="Date" Value="jeudi 16 décembre 2010">
+</Property><Property Name="Time" Value="17:10">
+</Property><Property Name="Log Number" Value="2">
+</Property></Properties><Event ErrorLevel="0" Project="DDD.Data.Tests" Source="DDD.Data.Tests\DDD.Data.Tests.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="DDD.Data.Tests" Source="DDD.Data.Tests\DDD.Data.Tests.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="DDD.Data" Source="DDD.Data\DDD.Data.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="DDD.Data" Source="DDD.Data\DDD.Data.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="DDD.Data.SqlServer" Source="DDD.Data.SqlServer\DDD.Data.SqlServer.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="DDD.Data.SqlServer" Source="DDD.Data.SqlServer\DDD.Data.SqlServer.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="DDD.Data.SqlServer.Tests" Source="DDD.Data.SqlServer.Tests\DDD.Data.SqlServer.Tests.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="DDD.Data.SqlServer.Tests" Source="DDD.Data.SqlServer.Tests\DDD.Data.SqlServer.Tests.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="" Source="DataFramework.sln" Description="The solution file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="" Source="DataFramework.sln" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="DDD.Data.Tests" Source="DDD.Data.Tests\DDD.Data.Tests.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

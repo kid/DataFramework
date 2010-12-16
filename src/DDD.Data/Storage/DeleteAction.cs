@@ -3,7 +3,7 @@ using DDD.Data.MetaData;
 
 namespace DDD.Data.Storage
 {
-    public class DeleteAction : DatabaseAction
+    public class DeleteAction<TEntity> : DatabaseAction
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="DeleteAction"/> class.
@@ -28,13 +28,13 @@ namespace DDD.Data.Storage
         /// </summary>
         /// <typeparam name="TEntity">The type of the entity.</typeparam>
         /// <param name="entity">The entity.</param>
-        public void Delete<TEntity>(TEntity entity)
+        public void Delete(TEntity entity)
         {
-            using (var command = CreateCommand())
+            using (var command = this.CreateCommand())
             {
-                var tableInfo = MetaDataStore.GetTableInfoFor<TEntity>();
+                var tableInfo = this.MetaDataStore.GetTableInfoFor<TEntity>();
 
-                command.CommandText = tableInfo.GetDeleteStoredProcName();
+                command.CommandText = this.MetaDataStore.GetStoredProcNameFor<DeleteAction<TEntity>>();
                 command.CreateAndAddInputParameter(
                     tableInfo.PrimaryKey.Name,
                     tableInfo.PrimaryKey.DbType,
@@ -42,7 +42,7 @@ namespace DDD.Data.Storage
                 );
                 command.ExecuteNonQuery();
 
-                SessionLevelCache.Remove(entity);
+                this.SessionLevelCache.Remove(entity);
             }
         }
     }

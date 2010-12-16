@@ -3,7 +3,7 @@ using DDD.Data.MetaData;
 
 namespace DDD.Data.Storage
 {
-    public class GetByIdAction : DatabaseAction
+    public class GetByIdAction<TEntity> : DatabaseAction
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="GetByIdAction"/> class.
@@ -29,7 +29,7 @@ namespace DDD.Data.Storage
         /// <typeparam name="TEntity">The type of the entity.</typeparam>
         /// <param name="id">The id.</param>
         /// <returns></returns>
-        public TEntity Get<TEntity>(object id)
+        public TEntity Get(object id)
         {
             TEntity cachedEntity;
             if (this.SessionLevelCache.TryToFind<TEntity>(id, out cachedEntity))
@@ -37,11 +37,12 @@ namespace DDD.Data.Storage
                 return cachedEntity;
             }
 
-            using (var command = CreateCommand())
+            using (var command = this.CreateCommand())
             {
-                var tableInfo = MetaDataStore.GetTableInfoFor<TEntity>();
+                var tableInfo = this.MetaDataStore.GetTableInfoFor<TEntity>();
 
-                command.CommandText = tableInfo.GetGetByIdStoredProcName();
+
+                command.CommandText = this.MetaDataStore.GetStoredProcNameFor<GetByIdAction<TEntity>>();
                 command.CreateAndAddInputParameter(
                     tableInfo.PrimaryKey.Name,
                     tableInfo.PrimaryKey.DbType,

@@ -17,7 +17,7 @@ namespace DDD.Data.MetaData.Tests
         [TestInitialize]
         public void Given()
         {
-            store = new MetaDataStore();
+            store = new MetaDataStore(null);
             store.BuildMetaDataFor(this.GetType().Assembly);
         }
 

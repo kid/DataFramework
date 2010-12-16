@@ -74,6 +74,7 @@
     <Compile Include="ISession.cs" />
     <Compile Include="MetaData\ColumnAttribute.cs" />
     <Compile Include="MetaData\ColumnInfo.cs" />
+    <Compile Include="MetaData\ConventionBasedStoredProcNamingStrategy.cs" />
     <Compile Include="MetaData\MetaData.cs" />
     <Compile Include="MetaData\MetaDataStore.cs" />
     <Compile Include="MetaData\PrimaryKeyAttribute.cs" />
@@ -95,6 +96,7 @@
     <Compile Include="Storage\SessionLevelCache.cs" />
     <Compile Include="Storage\TypeConverter.cs" />
     <Compile Include="Storage\UpdateAction.cs" />
+    <Compile Include="MetaData\IStoredProcNamingStrategy.cs" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">

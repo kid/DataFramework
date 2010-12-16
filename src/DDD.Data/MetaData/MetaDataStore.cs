@@ -7,6 +7,12 @@ namespace DDD.Data.MetaData
     public class MetaDataStore
     {
         private readonly Dictionary<Type, TableInfo> typeToTableInfo = new Dictionary<Type, TableInfo>();
+        private readonly IStoredProcNamingStrategy storedProcNamingStrategy;
+
+        public MetaDataStore(IStoredProcNamingStrategy storedProcNamingStrategy)
+        {
+            this.storedProcNamingStrategy = storedProcNamingStrategy;
+        }
 
         /// <summary>
         /// Gets the table info for the specified type.
@@ -135,6 +141,11 @@ namespace DDD.Data.MetaData
         {
             var attributes = Attribute.GetCustomAttributes(propertyInfo, typeof(TAttribute));
             return attributes.Length == 0 ? null : (TAttribute)attributes[0];
+        }
+
+        public string GetStoredProcNameFor<TAction>()
+        {
+            return this.storedProcNamingStrategy.GetStoredProcNameFor<TAction>();
         }
     }
 }
